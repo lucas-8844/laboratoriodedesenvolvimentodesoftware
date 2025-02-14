@@ -19,3 +19,4 @@
 
 ## Sistema de Cobrança
 - *Como sistema de cobrança, eu quero **receber notificações de matrícula e cancelamento*, para que eu possa gerar cobranças adequadas aos alunos.
+- Integrantes do grupo: Lucas Carvalho Peres e Matheus Pretti de Oliva.
