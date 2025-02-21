@@ -4,6 +4,8 @@ INTEGRANTES:
 - Matheus Pretti de Oliva
 
 ![Diagrama em branco (1)](https://github.com/user-attachments/assets/4d438038-c75d-4cf3-87c4-af26cd15af3c)
+
+
 # Histórias de Usuário - Sistema de Matrícula
 
 ## Aluno
@@ -24,3 +26,15 @@ INTEGRANTES:
 
 ## Sistema de Cobrança
 - *Como sistema de cobrança, eu quero **receber notificações de matrícula e cancelamento*, para que eu possa gerar cobranças adequadas aos alunos.
+
+
+## Diagrama de Classe
+
+[Diagrama de Classe 2.pdf](https://github.com/user-attachments/files/18916617/Diagrama.de.Classe.2.pdf)
+
+
+
+
+
+
+
