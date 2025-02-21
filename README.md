@@ -28,6 +28,8 @@ INTEGRANTES:
 - *Como sistema de cobrança, eu quero **receber notificações de matrícula e cancelamento*, para que eu possa gerar cobranças adequadas aos alunos.
 
 
+
+
 ## Diagrama de Classe
 
 ![Diagrama de Classe 2](https://github.com/user-attachments/assets/4fba03c7-138f-4d38-b021-3034e12b139c)
