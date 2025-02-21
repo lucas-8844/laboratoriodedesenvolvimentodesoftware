@@ -30,7 +30,7 @@ INTEGRANTES:
 
 ## Diagrama de Classe
 
-[Diagrama de Classe 2](https://github.com/user-attachments/files/18916617/Diagrama.de.Classe.2)
+![Diagrama de Classe 2](https://github.com/user-attachments/assets/4fba03c7-138f-4d38-b021-3034e12b139c)
 
 
 
