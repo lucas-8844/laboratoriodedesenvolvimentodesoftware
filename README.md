@@ -30,7 +30,7 @@ INTEGRANTES:
 
 ## Diagrama de Classe
 
-[Diagrama de Classe 2.pdf](https://github.com/user-attachments/files/18916617/Diagrama.de.Classe.2.pdf)
+[Diagrama de Classe 2](https://github.com/user-attachments/files/18916617/Diagrama.de.Classe.2)
 
 
 
