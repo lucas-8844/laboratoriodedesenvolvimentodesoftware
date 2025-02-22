@@ -1,3 +1,4 @@
+
 class SistemaDeInscricao {
     public void gerenciarPeriodoInscricao() {
         // Implementação futura
