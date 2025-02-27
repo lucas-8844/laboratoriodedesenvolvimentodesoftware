@@ -1,11 +1,18 @@
 
 class Matricula {
-    public void registrar(Aluno aluno, Disciplina disciplina) {
-        // Implementação futura
+    private Aluno aluno;
+    private Disciplina disciplina;
+
+    public Matricula(Aluno aluno, Disciplina disciplina) {
+        this.aluno = aluno;
+        this.disciplina = disciplina;
     }
 
-    public boolean controlarLimites(Aluno aluno) {
-        // Implementação futura
-        return false;
+    public Aluno getAluno() {
+        return aluno;
+    }
+
+    public Disciplina getDisciplina() {
+        return disciplina;
     }
 }

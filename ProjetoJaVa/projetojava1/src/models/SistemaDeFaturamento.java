@@ -1,6 +1,6 @@
 
 class SistemaDeFaturamento {
-    public void notificarInscricao(Aluno aluno, Disciplina disciplina) {
-        // Implementação futura
+    public void gerarFatura(Aluno aluno, double valor) {
+        System.out.println("Fatura gerada para " + aluno.nome + ": R$" + valor);
     }
 }

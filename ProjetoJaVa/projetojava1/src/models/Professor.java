@@ -1,8 +1,10 @@
 
-import java.util.List;
 
-class Professor {
-    private String nome;
+class Professor extends Usuario {
     private String rg;
-    private List<Disciplina> disciplinasMinistradas;
+
+    public Professor(String nome, String login, String senha, String rg) {
+        super(nome, login, senha);
+        this.rg = rg;
+    }
 }

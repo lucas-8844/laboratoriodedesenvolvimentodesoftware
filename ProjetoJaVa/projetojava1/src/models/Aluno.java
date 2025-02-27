@@ -1,12 +1,14 @@
 
-import java.util.List;
 
-class Aluno {
-    private String nome;
+class Aluno extends Usuario {
     private String numeroMatricula;
-    private List<Disciplina> disciplinasMatriculadas;
 
-    public void matricularDisciplina(Disciplina disciplina) {
-        // Implementação futura
+    public Aluno(String nome, String login, String senha, String numeroMatricula) {
+        super(nome, login, senha);
+        this.numeroMatricula = numeroMatricula;
+    }
+
+    public String getNumeroMatricula() {
+        return numeroMatricula;
     }
 }
