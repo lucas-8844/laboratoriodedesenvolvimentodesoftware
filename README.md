@@ -3,7 +3,8 @@ INTEGRANTES:
 - Lucas Carvalho Peres 
 - Matheus Pretti de Oliva
 
-![https://github.com/user-attachments/assets/4d438038-c75d-4cf3-87c4-af26cd15af3c)
+![Diagrama de Casos de Uso](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Diagrama%20de%20casos%20de%20uso%20Laborat%C3%B3rio%202.png?raw=true)
+
 
 
 # Histórias de Usuário - Sistema de Aluguel de Carros.
