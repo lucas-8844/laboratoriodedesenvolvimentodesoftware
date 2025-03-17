@@ -3,6 +3,7 @@ INTEGRANTES:
 - Lucas Carvalho Peres 
 - Matheus Pretti de Oliva
 
+## Diagrama de Casos de Uso
 ![Diagrama de Casos de Uso](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Diagrama%20de%20casos%20de%20uso%20Laborat%C3%B3rio%202.png?raw=true)
 
 
@@ -29,7 +30,8 @@ INTEGRANTES:
 
 ## Diagrama de Classe
 
-![Diagrama de Classe 2](https://github.com/user-attachments/assets/4fba03c7-138f-4d38-b021-3034e12b139c)
+![Class Diagram Laboratório 2](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Class%20Diagram%20Laborat%C3%B3rio%202.png?raw=true)
+
 
 
 
