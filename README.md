@@ -32,6 +32,8 @@ INTEGRANTES:
 
 ![Class Diagram Laboratório 2](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Class%20Diagram%20Laborat%C3%B3rio%202.png?raw=true)
 
+## Diagrama de Pacotes
+![Diagrama de Pacotes Laboratório 2](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Diagram%20de%20pacotes%20Laboratorio%202.png?raw=true)
 
 
 
