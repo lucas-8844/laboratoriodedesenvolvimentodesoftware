@@ -34,8 +34,9 @@ INTEGRANTES:
 
 ## Diagrama de Pacotes
 ![Diagrama de Pacotes Laboratório 2](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Diagram%20de%20pacotes%20Laboratorio%202.png?raw=true)
+
 ## Diagrama de Componente
-![Diagrama de Componente Laboratório 2]https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Diagrama%20de%20componente.png?raw=true
+![Diagrama de Componente Laboratório 2](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-2/Diagramas/Diagrama%20de%20componente.png?raw=true)
 
 
 
