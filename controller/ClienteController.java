@@ -2,49 +2,49 @@ package controller;
 
 import dao.ClienteDAO;
 import model.Cliente;
-import java.io.IOException;
-import java.util.List;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+@RestController
+@RequestMapping("/clientes") // Define a URL base
+@CrossOrigin(origins = "*") // Permite requisições do frontend
+public class ClienteController {
 
-@WebServlet("/cliente")
-public class ClienteController extends HttpServlet {
-    private ClienteDAO clienteDAO = new ClienteDAO();
+    @Autowired
+    private ClienteService clienteService;
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String action = request.getParameter("action");
-
-        if ("create".equals(action)) {
-            String nome = request.getParameter("nome");
-            String email = request.getParameter("email");
-            String telefone = request.getParameter("telefone");
-
-            Cliente cliente = new Cliente(0, nome, email, telefone);
-            clienteDAO.adicionarCliente(cliente);
-        } else if ("update".equals(action)) {
-            int id = Integer.parseInt(request.getParameter("id"));
-            String nome = request.getParameter("nome");
-            String email = request.getParameter("email");
-            String telefone = request.getParameter("telefone");
-
-            Cliente cliente = new Cliente(id, nome, email, telefone);
-            clienteDAO.atualizarCliente(cliente);
-        } else if ("delete".equals(action)) {
-            int id = Integer.parseInt(request.getParameter("id"));
-            clienteDAO.deletarCliente(id);
-        }
-
-        response.sendRedirect("clientes.jsp");
+    
+    @GetMapping
+    public List<Cliente> listarClientes() {
+        return clienteService.listarTodos();
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        List<Cliente> clientes = clienteDAO.listarClientes();
-        request.setAttribute("clientes", clientes);
-        request.getRequestDispatcher("clientes.jsp").forward(request, response);
+    
+    @GetMapping("/{id}")
+    public ResponseEntity<Cliente> buscarCliente(@PathVariable Long id) {
+        return clienteService.buscarPorId(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    
+    @PostMapping
+    public ResponseEntity<Cliente> cadastrarCliente(@RequestBody Cliente cliente) {
+        Cliente novoCliente = clienteService.salvar(cliente);
+        return ResponseEntity.status(HttpStatus.CREATED).body(novoCliente);
+    }
+
+    
+    @PutMapping("/{id}")
+    public ResponseEntity<Cliente> atualizarCliente(@PathVariable Long id, @RequestBody Cliente cliente) {
+        return clienteService.atualizar(id, cliente)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+   
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarCliente(@PathVariable Long id) {
+        if (clienteService.deletar(id)) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.notFound().build();
     }
 }
