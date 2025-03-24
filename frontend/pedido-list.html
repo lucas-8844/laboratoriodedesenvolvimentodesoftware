@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Pedidos</title>
+</head>
+<body>
+    <h1>Lista de Pedidos de Aluguel</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Usuário</th>
+            <th>Status</th>
+        </tr>
+        <tbody id="tabelaPedidos"></tbody>
+    </table>
+
+    <script>
+        fetch('http://localhost:8080/api/pedidos/listar')
+            .then(response => response.json())
+            .then(pedidos => {
+                let tabela = document.getElementById("tabelaPedidos");
+                pedidos.forEach(pedido => {
+                    let row = tabela.insertRow();
+                    row.insertCell(0).textContent = pedido.id;
+                    row.insertCell(1).textContent = pedido.usuario.nome;
+                    row.insertCell(2).textContent = pedido.status;
+                });
+            })
+            .catch(error => console.error('Erro:', error));
+    </script>
+</body>
+</html>
