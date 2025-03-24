@@ -1,50 +1,39 @@
-package controller;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
-import dao.ClienteDAO;
-import model.Cliente;
+import java.util.List;
+import java.util.Optional;
+
 @RestController
-@RequestMapping("/clientes") // Define a URL base
-@CrossOrigin(origins = "*") // Permite requisições do frontend
+@RequestMapping("/clientes")
 public class ClienteController {
 
-    @Autowired
-    private ClienteService clienteService;
+    private final ClienteService clienteService;
 
-    
+    public ClienteController(ClienteService clienteService) {
+        this.clienteService = clienteService;
+    }
+
     @GetMapping
     public List<Cliente> listarClientes() {
         return clienteService.listarTodos();
     }
 
-    
     @GetMapping("/{id}")
     public ResponseEntity<Cliente> buscarCliente(@PathVariable Long id) {
-        return clienteService.buscarPorId(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        Optional<Cliente> cliente = clienteService.buscarPorId(id);
+        return cliente.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    
     @PostMapping
-    public ResponseEntity<Cliente> cadastrarCliente(@RequestBody Cliente cliente) {
-        Cliente novoCliente = clienteService.salvar(cliente);
-        return ResponseEntity.status(HttpStatus.CREATED).body(novoCliente);
+    public Cliente criarCliente(@RequestBody Cliente cliente) {
+        return clienteService.salvar(cliente);
     }
 
-    
-    @PutMapping("/{id}")
-    public ResponseEntity<Cliente> atualizarCliente(@PathVariable Long id, @RequestBody Cliente cliente) {
-        return clienteService.atualizar(id, cliente)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
-    }
-
-   
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deletarCliente(@PathVariable Long id) {
-        if (clienteService.deletar(id)) {
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.notFound().build();
+        clienteService.deletar(id);
+        return ResponseEntity.noContent().build();
     }
 }
+
