@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Novo Pedido de Aluguel</title>
+</head>
+<body>
+    <h1>Criar Pedido de Aluguel</h1>
+    <form id="pedidoForm">
+        <label>Usuário:</label>
+        <select id="usuarioSelect" required></select>
+        <button type="submit">Criar Pedido</button>
+    </form>
+
+    <script>
+        // Carregar usuários disponíveis
+        fetch('http://localhost:8080/api/usuarios/listar')
+            .then(response => response.json())
+            .then(usuarios => {
+                let select = document.getElementById("usuarioSelect");
+                usuarios.forEach(usuario => {
+                    let option = document.createElement("option");
+                    option.value = usuario.id;
+                    option.textContent = usuario.nome;
+                    select.appendChild(option);
+                });
+            });
+
+        // Enviar novo pedido
+        document.getElementById('pedidoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const usuarioId = document.getElementById('usuarioSelect').value;
+
+            fetch('http://localhost:8080/api/pedidos/salvar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ usuario: { id: usuarioId }, status: "PENDENTE" })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Pedido criado para " + data.usuario.nome);
+                window.location.href = "/pedidos/listar";
+            })
+            .catch(error => console.error('Erro:', error));
+        });
+    </script>
+</body>
+</html>
