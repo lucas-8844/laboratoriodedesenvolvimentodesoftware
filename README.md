@@ -1,31 +1,121 @@
-# Laboratorio De Desenvolvimento De Software 
+# Laboratorio 3 De Desenvolvimento De Software 
 INTEGRANTES:
 - Lucas Carvalho Peres 
 - Matheus Pretti de Oliva
 
-![Diagrama em branco (1)](https://github.com/user-attachments/assets/4d438038-c75d-4cf3-87c4-af26cd15af3c)
+# Histórias de Usuário — Sistema de Moeda Estudantil
+
+## 1. Cadastro e Autenticação
+
+### História 1.1 — Cadastro de Aluno
+**Como** aluno,  
+**quero** me cadastrar informando meus dados pessoais e acadêmicos,  
+**para que** eu possa participar do programa de moeda estudantil.
+
+**Critérios de aceitação:**
+- O sistema deve validar CPF, email e verificar se a instituição existe.
+- O cadastro só será aceito se todos os campos obrigatórios forem preenchidos corretamente.
+
+---
+
+### História 1.2 — Login de Usuário
+**Como** usuário (aluno, professor ou empresa),  
+**quero** fazer login com email e senha,  
+**para que** eu possa acessar minha conta com segurança.
+
+**Critérios de aceitação:**
+- O sistema deve autenticar com base nas credenciais.
+- Mensagem de erro deve ser exibida em caso de falha na autenticação.
+
+---
+
+## 2. Envio e Recebimento de Moedas
+
+### História 2.1 — Enviar Moedas ao Aluno
+**Como** professor,  
+**quero** enviar moedas para meus alunos com uma mensagem de reconhecimento,  
+**para que** eu possa valorizar seu desempenho e comportamento em aula.
+
+**Critérios de aceitação:**
+- O professor deve ter saldo suficiente para enviar as moedas.
+- A mensagem de reconhecimento é obrigatória.
+- O saldo do professor deve ser atualizado após o envio.
+
+---
+
+### História 2.2 — Notificação por E-mail ao Aluno
+**Como** aluno,  
+**quero** ser notificado por e-mail ao receber moedas,  
+**para que** eu saiba que fui reconhecido por um professor.
+
+**Critérios de aceitação:**
+- O email deve conter a quantidade recebida, o nome do professor e a mensagem enviada.
+
+---
+
+## 3. Consultar Extrato
+
+### História 3.1 — Extrato do Aluno
+**Como** aluno,  
+**quero** consultar meu extrato de transações,  
+**para que** eu possa visualizar o histórico de moedas recebidas e trocadas.
+
+---
+
+### História 3.2 — Extrato do Professor
+**Como** professor,  
+**quero** visualizar o extrato de moedas enviadas,  
+**para que** eu possa acompanhar como utilizei meu saldo ao longo do tempo.
+
+---
+
+## 4. Resgate de Vantagens
+
+### História 4.1 — Resgatar Vantagem
+**Como** aluno,  
+**quero** trocar minhas moedas por produtos ou descontos cadastrados,  
+**para que** eu possa usufruir dos benefícios oferecidos pelas empresas parceiras.
+
+**Critérios de aceitação:**
+- O aluno só poderá resgatar uma vantagem se tiver saldo suficiente.
+- O saldo será descontado após a troca.
+- Um cupom com código único será enviado ao aluno e à empresa parceira.
+
+---
+
+### História 4.2 — Notificação à Empresa Parceira
+**Como** empresa parceira,  
+**quero** receber um e-mail com o código do cupom gerado,  
+**para que** eu possa verificar e validar a troca realizada por um aluno.
+
+---
+
+## 5. Cadastro de Vantagens
+
+### História 5.1 — Cadastrar Vantagens
+**Como** empresa parceira,  
+**quero** cadastrar vantagens com descrição, custo e imagem,  
+**para que** os alunos possam visualizar e resgatar essas ofertas.
+
+**Critérios de aceitação:**
+- Todos os campos devem ser obrigatórios no cadastro da vantagem.
+- A imagem deve ser exibida junto da descrição para os alunos.
+
+---
+
+## 6. Gestão de Moedas
+
+### História 6.1 — Recarregar Saldo por Semestre
+**Como** professor,  
+**quero** ter mil moedas adicionadas ao meu saldo no início de cada semestre,  
+**para que** eu possa continuar reconhecendo alunos continuamente.
+
+**Critérios de aceitação:**
+- O saldo é cumulativo, ou seja, moedas não utilizadas permanecem disponíveis no semestre seguinte.
 
 
-# Histórias de Usuário - Sistema de Matrícula
 
-## Aluno
-- *Como aluno, eu quero **acessar meu histórico de matrículas*, para que eu possa visualizar as disciplinas em que já estive matriculado.
-- *Como aluno, eu quero **me matricular em disciplinas, para que eu possa escolher as matérias do semestre. *(Inclui notificação de cobrança)
-- *Como aluno, eu quero **cancelar minha matrícula em uma disciplina, para que eu possa deixar uma matéria que não desejo cursar. *(Pode estender a notificação de cobrança)
-- *Como aluno, eu quero **efetuar login no sistema*, para que eu possa acessar minhas informações acadêmicas.
 
-## Professor
-- *Como professor, eu quero **consultar os alunos matriculados*, para que eu possa verificar quais estudantes estão em minhas disciplinas.
-- *Como professor, eu quero **efetuar login no sistema*, para que eu possa acessar as informações acadêmicas dos alunos.
-
-## Secretaria
-- *Como secretária, eu quero **gerenciar o currículo do semestre, para que eu possa organizar as disciplinas e estrutura do período letivo. *(Inclui criação/edição de disciplinas)
-- *Como secretária, eu quero **criar e editar disciplinas*, para que eu possa manter o catálogo de matérias atualizado.
-- *Como secretária, eu quero **cadastrar novos professores*, para que eu possa garantir que as disciplinas tenham docentes responsáveis.
-- *Como secretária, eu quero **efetuar login no sistema*, para que eu possa acessar as funções administrativas.
-
-## Sistema de Cobrança
-- *Como sistema de cobrança, eu quero **receber notificações de matrícula e cancelamento*, para que eu possa gerar cobranças adequadas aos alunos.
 
 
 
@@ -35,7 +125,7 @@ INTEGRANTES:
 ![Diagrama de Classe 2](https://github.com/user-attachments/assets/4fba03c7-138f-4d38-b021-3034e12b139c)
 
 
-
+## Diagrama de Componentes
 
 
 
