@@ -127,6 +127,6 @@ INTEGRANTES:
 
 ## Diagrama de Componentes
 
-
+![Diagrama de componentes](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-3/Diagramas/Diagrama%20de%20componentes.jpeg?raw=true).
 
 
