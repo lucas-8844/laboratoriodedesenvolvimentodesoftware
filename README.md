@@ -122,7 +122,7 @@ INTEGRANTES:
 
 ## Diagrama de Classe
 
-![Diagrama de Classe 2](https://github.com/user-attachments/assets/4fba03c7-138f-4d38-b021-3034e12b139c)
+![Diagrama de Classe 2](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-3/Diagramas/diagrama%20de%20classes.jpeg?raw=true)
 
 
 ## Diagrama de Componentes
