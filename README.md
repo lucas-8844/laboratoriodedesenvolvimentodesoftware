@@ -114,8 +114,8 @@ INTEGRANTES:
 - O saldo é cumulativo, ou seja, moedas não utilizadas permanecem disponíveis no semestre seguinte.
 
 
-
-
+## Diagrama de Casos de uso
+![Diagrama de casos de uso](https://github.com/lucas-8844/laboratoriodedesenvolvimentodesoftware/blob/Laborat%C3%B3rio-3/Diagramas/Casos%20de%20uso.jpeg?raw=true)
 
 
 
