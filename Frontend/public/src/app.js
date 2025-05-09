@@ -1,19 +1,15 @@
-import axios from 'axios';
-
-const api = axios.create({
-    baseURL: 'http://localhost:8080', // URL base do back-end
-});
-
-export default api;
-
 import React from 'react';
-import HomePage from './pages/HomePage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AlunosPage from './pages/AlunosPage';
 
 function App() {
     return (
-        <div className="App">
-            <HomePage />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<AlunosPage />} />
+                <Route path="/alunos" element={<AlunosPage />} />
+            </Routes>
+        </Router>
     );
 }
 
