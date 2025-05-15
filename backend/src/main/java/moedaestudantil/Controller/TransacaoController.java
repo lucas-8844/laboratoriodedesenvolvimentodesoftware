@@ -41,5 +41,14 @@ public class TransacaoController {
         }
         return ResponseEntity.notFound().build();
     }
+    @PostMapping("/enviar")
+public ResponseEntity<Transacao> enviarMoedas(@RequestBody Transacao transacao) {
+    try {
+        Transacao novaTransacao = transacaoService.salvar(transacao);
+        return ResponseEntity.ok(novaTransacao);
+    } catch (Exception e) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+}
 }
 v
