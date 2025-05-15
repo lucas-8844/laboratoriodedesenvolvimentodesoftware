@@ -23,4 +23,14 @@ public class AlunoController {
     public Aluno salvar(@RequestBody Aluno aluno) {
         return alunoService.salvar(aluno);
     }
+    @GetMapping("/{id}/extrato")
+public ResponseEntity<List<Transacao>> consultarExtrato(@PathVariable Long id) {
+    try {
+        List<Transacao> extrato = transacaoService.consultarPorAluno(id);
+        return ResponseEntity.ok(extrato);
+    } catch (Exception e) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    }
+}
+
 }
