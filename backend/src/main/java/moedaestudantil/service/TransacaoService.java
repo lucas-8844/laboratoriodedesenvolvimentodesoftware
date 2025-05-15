@@ -35,7 +35,10 @@ public class TransacaoService {
         }
         return null;
     }
-
+    
+    public List<Transacao> consultarPorAluno(Long alunoId) {
+    return transacaoRepository.findByAlunoId(alunoId);
+}
     public boolean deletar(Long id) {
         if (transacaoRepository.existsById(id)) {
             transacaoRepository.deleteById(id);
