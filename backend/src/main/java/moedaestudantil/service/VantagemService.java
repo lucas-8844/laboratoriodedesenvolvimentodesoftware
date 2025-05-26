@@ -1,3 +1,4 @@
+package com.moedaestudantil.service;
 @Service
 public class VantagemService {
     @Autowired
