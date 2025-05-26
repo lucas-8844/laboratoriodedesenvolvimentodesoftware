@@ -1,3 +1,4 @@
+package com.moedaestudantil.controller;
 @RestController
 @RequestMapping("/vantagens")
 public class VantagemController {
