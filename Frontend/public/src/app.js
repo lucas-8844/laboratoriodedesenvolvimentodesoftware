@@ -8,6 +8,8 @@ import ProfessorPage from './pages/ProfessorPage';
 import TransacaoPage from './pages/TransacaoPage';
 import EnvioMoedasPage from './pages/EnvioMoedasPage';
 import AlunoExtratoPage from './pages/AlunoExtratoPage';
+import CadastroVantagemPage from './pages/CadastroVantagemPage';
+import ListagemVantagensPage from './pages/ListagemVantagensPage';
 
 function App() {
     return (
@@ -22,11 +24,15 @@ function App() {
                     <Route path="/transacoes" element={<TransacaoPage />} />
                     <Route path="/enviar-moedas" element={<EnvioMoedasPage />} />
                     <Route path="/extrato" element={<AlunoExtratoPage alunoId={1} />} />
+                    <Route path="/cadastro-vantagem" element={<CadastroVantagemPage />} />
+                    <Route path="/listagem-vantagens" element={<ListagemVantagensPage />} />
                 </Routes>
             </div>
         </Router>
     );
 }
+
+export default App;
 
 export default App;
 
