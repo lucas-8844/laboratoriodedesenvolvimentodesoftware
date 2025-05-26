@@ -1,3 +1,4 @@
+package com.moedaestudantil.model;
 @Entity
 @Data
 public class Vantagem {
