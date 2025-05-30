@@ -49,6 +49,21 @@ public ResponseEntity<Transacao> enviarMoedas(@RequestBody Transacao transacao) 
     } catch (Exception e) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
+    @PostMapping("/resgatar")
+public ResponseEntity<?> resgatarVantagem(@RequestBody Map<String, String> payload) {
+    try {
+        Long alunoId = Long.parseLong(payload.get("alunoId"));
+        Long vantagemId = Long.parseLong(payload.get("vantagemId"));
+
+        Vantagem vantagem = vantagemRepository.findById(vantagemId)
+            .orElseThrow(() -> new RuntimeException("Vantagem não encontrada"));
+
+        Transacao transacao = transacaoService.resgatarVantagem(alunoId, vantagem);
+        return ResponseEntity.ok(transacao);
+    } catch (Exception e) {
+        return ResponseEntity.badRequest().body(e.getMessage());
+    }
 }
 }
-v
+}
+
