@@ -10,6 +10,7 @@ import EnvioMoedasPage from './pages/EnvioMoedasPage';
 import AlunoExtratoPage from './pages/AlunoExtratoPage';
 import CadastroVantagemPage from './pages/CadastroVantagemPage';
 import ListagemVantagensPage from './pages/ListagemVantagensPage';
+import ResgatarVantagemPage from './pages/ResgatarVantagemPage';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
             <Navbar />
             <div className="container mt-4">
                 <Routes>
+        <Route path="/resgatar-vantagem" element={<ResgatarVantagemPage />} />
                     <Route path="/" element={<HomePage />} />
                     <Route path="/alunos" element={<AlunosPage />} />
                     <Route path="/empresas" element={<EmpresaPage />} />
