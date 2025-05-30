@@ -35,8 +35,26 @@ public class TransacaoService {
         }
         return null;
     }
-    
-    public List<Transacao> consultarPorAluno(Long alunoId) {
+    public Transacao resgatarVantagem(Long alunoId, Vantagem vantagem) {
+    Aluno aluno = alunoRepository.findById(alunoId)
+        .orElseThrow(() -> new RuntimeException("Aluno não encontrado"));
+
+    if (aluno.getMoedas() < vantagem.getCustoEmMoedas()) {
+        throw new RuntimeException("Saldo insuficiente");
+    }
+
+    aluno.setMoedas(aluno.getMoedas() - vantagem.getCustoEmMoedas());
+    alunoRepository.save(aluno);
+
+    Transacao transacao = new Transacao();
+    transacao.setTipo("RESGATE");
+    transacao.setValor(vantagem.getCustoEmMoedas());
+    transacao.setAluno(aluno);
+    transacao.setData(LocalDateTime.now());
+
+    return transacaoRepository.save(transacao);
+}
+      public List<Transacao> consultarPorAluno(Long alunoId) {
     return transacaoRepository.findByAlunoId(alunoId);
 }
     public boolean deletar(Long id) {
